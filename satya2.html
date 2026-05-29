@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentasi PKL - Satya</title>
+    <!-- Tailwind CSS & FontAwesome Icons -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        .slide { display: none; }
+        .slide.active { display: flex; animation: slideIn 0.4s ease-out; }
+        @keyframes slideIn {
+            from { opacity: 0; transform: scale(0.98); }
+            to { opacity: 1; transform: scale(1); }
+        }
+    </style>
+</head>
+<body class="bg-slate-900 text-slate-100 font-sans min-h-screen flex flex-col justify-between overflow-x-hidden">
+
+    <!-- TOP BAR (NAVIGASI ATAS) -->
+    <header class="bg-slate-800/80 backdrop-blur border-b border-slate-700 p-4 sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-3">
+                <div class="bg-indigo-600 p-2 rounded-lg text-white">
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                </div>
+                <div>
+                    <h1 class="text-sm md:text-base font-bold text-white tracking-wide">LAPORAN PKL 2026</h1>
+                </div>
+            </div>
+            <!-- Indikator Slide -->
+            <span id="slide-number" class="text-xs md:text-sm bg-slate-700 px-3 py-1.5 rounded-full text-indigo-400 font-semibold border border-slate-600">
+                Slide 1 / 5
+            </span>
+        </div>
+    </header>
+
+    <!-- MAIN PRESENTATION AREA -->
+    <main class="container mx-auto px-4 py-6 flex-grow flex items-center justify-center">
+        <div class="w-full max-w-4xl bg-slate-800 rounded-2xl shadow-2xl border border-slate-700 p-6 md:p-12 min-h-[480px] flex flex-col justify-between relative overflow-hidden">
+            
+            <!-- SLIDE 1: DATA DIRI & PEMBUKA -->
+            <div class="slide active flex-col justify-center h-full" id="slide-1">
+                <div class="text-center space-y-6">
+                    <span class="bg-indigo-500/10 text-indigo-400 text-xs font-bold px-4 py-1.5 rounded-full uppercase tracking-widest border border-indigo-500/20">
+                        Sesi Presentasi
+                    </span>
+                    <h2 class="text-3xl md:text-5xl font-black text-white leading-tight">
+                        Praktek Kerja Lapangan <br><span class="text-indigo-400">& Topik Bahasan</span>
+                    </h2>
+                    
+                    <!-- Kartu Identitas Siswa -->
+                    <div class="max-w-md mx-auto bg-slate-900/60 p-6 rounded-xl border border-slate-700 text-left space-y-3 shadow-inner">
+                        <div class="flex border-b border-slate-800 pb-2">
+                            <span class="w-24 text-slate-400 text-sm font-medium">Nama</span>
+                            <span class="text-slate-200 font-semibold">: I Wayan Satya Wedanta</span>
+                        </div>
+                        <div class="flex border-b border-slate-800 pb-2">
+                            <span class="w-24 text-slate-400 text-sm font-medium">NIS</span>
+                            <span class="text-indigo-400 font-mono font-semibold">: 00000000</span>
+                        </div>
+                        <div class="flex border-b border-slate-800 pb-2">
+                            <span class="w-24 text-slate-400 text-sm font-medium">Kelas</span>
+                            <span class="text-slate-200 font-semibold">: XI RPL 4</span>
+                        </div>
+                        <div class="flex pt-1">
+                            <span class="w-24 text-slate-400 text-sm font-medium">Tempat PKL</span>
+                            <span class="text-emerald-400 font-semibold">: THE 1O1 BALI FONTANA SEMINYAK </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 2: PROFIL PERUSAHAAN -->
+            <div class="slide flex-col" id="slide-2">
+                <div>
+                    <h3 class="text-2xl font-extrabold text-white mb-2 flex items-center">
+                        <i class="fa-solid fa-building text-indigo-400 mr-3"></i>Profil Perusahaan
+                    </h3>
+                    <div class="h-1 w-20 bg-indigo-500 rounded mb-6"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-auto">
+                    <div class="space-y-3">
+                        <h4 class="text-xl font-bold text-indigo-400">THE 1O1 BALI FONTANA SEMINYAK</h4>
+                        <p class="text-slate-300 leading-relaxed text-sm">
+                            hotel bintang 4 yang memadukan konsep kenyamanan modern dengan sentuhan estetika lokal Bali yang elegan
+                        </p>
+                    </div>
+                    <div class="bg-slate-900/50 p-5 rounded-xl border border-slate-700 space-y-3">
+                        <h4 class="text-xs font-bold text-slate-400 uppercase tracking-wider">Detail Penempatan:</h4>
+                        <ul class="space-y-2 text-sm text-slate-300">
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i><strong>Divisi:</strong>  Trainee IT</li>
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i><strong>Pembimbing:</strong>  M.Agus Wahyudi</li>
+                            <li><i class="fa-solid fa-check text-emerald-400 mr-2"></i><strong>Waktu:</strong> 6 bulan (20 desember - 20 juni)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 3: KEGIATAN UTAMA -->
+            <div class="slide flex-col" id="slide-3">
+                <div>
+                    <h3 class="text-2xl font-extrabold text-white mb-2 flex items-center">
+                        <i class="fa-solid fa-cubes text-indigo-400 mr-3"></i>Kegiatan Selama PKL
+                    </h3>
+                    <div class="h-1 w-20 bg-indigo-500 rounded mb-6"></div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 my-auto">
+                    <div class="p-5 bg-slate-900/40 rounded-xl border border-slate-700 hover:border-indigo-500/50 transition">
+                        <div class="text-indigo-400 text-2xl mb-3"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h4 class="font-bold text-white mb-2 text-sm">Program Ving Card</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">memprogram serta memasang sebuah smart door lock dengan menggunakan software khusus</p>
+                    </div>
+                    <div class="p-5 bg-slate-900/40 rounded-xl border border-slate-700 hover:border-indigo-500/50 transition">
+                        <div class="text-indigo-400 text-2xl mb-3"><i class="fa-solid fa-bug-slash"></i></div>
+                        <h4 class="font-bold text-white mb-2 text-sm">Membuat Website</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Membuat website yang bagus dan menarik</p>
+                    </div>
+                    <div class="p-5 bg-slate-900/40 rounded-xl border border-slate-700 hover:border-indigo-500/50 transition">
+                        <div class="text-indigo-400 text-2xl mb-3"><i class="fa-solid fa-users"></i></div>
+                        <h4 class="font-bold text-white mb-2 text-sm">Daily Check</h4>
+                        <p class="text-xs text-slate-400 leading-relaxed">Mengecek seluruh area hotel</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 4: FITUR & SKILL BERKEMBANG -->
+            <div class="slide flex-col" id="slide-4">
+                <div>
+                    <h3 class="text-2xl font-extrabold text-white mb-2 flex items-center">
+                        <i class="fa-solid fa-chart-line text-indigo-400 mr-3"></i>Rekap Kegiatan
+                    </h3>
+                    <div class="h-1 w-20 bg-indigo-500 rounded mb-6"></div>
+                </div>
+                <div class="space-y-5 my-auto max-w-xl mx-auto w-full">
+                    <div>
+                        <div class="flex justify-between text-sm mb-1.5">
+                            <span class="text-slate-300 font-medium">Perbaikan Ving Card</span>
+                            <span class="text-indigo-400 font-bold">100%</span>
+                        </div>
+                        <div class="w-full bg-slate-900 rounded-full h-2.5 p-0.5 border border-slate-700">
+                            <div class="bg-indigo-500 h-1.5 rounded-full transition-all duration-500" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1.5">
+                            <span class="text-slate-300 font-medium">Checking Area dan Clear Up data tv</span>
+                            <span class="text-indigo-400 font-bold">75%</span>
+                        </div>
+                        <div class="w-full bg-slate-900 rounded-full h-2.5 p-0.5 border border-slate-700">
+                            <div class="bg-indigo-500 h-1.5 rounded-full transition-all duration-500" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-1.5">
+                            <span class="text-slate-300 font-medium">Pembuatan dan perancangan website</span>
+                            <span class="text-indigo-400 font-bold">100%</span>
+                        </div>
+                        <div class="w-full bg-slate-900 rounded-full h-2.5 p-0.5 border border-slate-700">
+                            <div class="bg-indigo-500 h-1.5 rounded-full transition-all duration-500" style="width: 100%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SLIDE 5: KESIMPULAN & PENUTUP -->
+            <div class="slide flex-col justify-center text-center space-y-6" id="slide-5">
+                <div class="bg-emerald-500/10 text-emerald-400 text-4xl w-16 h-16 flex items-center justify-center rounded-full mx-auto border border-emerald-500/20 shadow-lg">
+                    <i class="fa-solid fa-circle-check"></i>
+                </div>
+                <div class="space-y-2">
+                    <h3 class="text-2xl font-bold text-white">Kesimpulan</h3>
+                    <p class="text-slate-400 max-w-lg mx-auto text-sm leading-relaxed">
+                        "PKL berhasil menyelaraskan teori sekolah dengan industri nyata. Saya belajar arti penting kedisiplinan, manajemen waktu, dan *teamwork* dalam menyelesaikan proyek komersial."
+                    </p>
+                </div>
+                <div class="pt-4 border-t border-slate-700/50 max-w-xs mx-auto">
+                    <h2 class="text-3xl font-black text-indigo-400">Terima Kasih</h2>
+                    <p class="text-xs text-slate-500 mt-1">Ada pertanyaan / tanggapan?</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER CONTROLLER (SISTEM NAVIGASI SLIDE) -->
+    <footer class="bg-slate-800 border-t border-slate-700 p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Info Pintasan Keyboard -->
+            <div class="hidden md:flex items-center text-xs text-slate-400 space-x-1.5">
+                <span class="bg-slate-700 px-1.5 py-0.5 rounded border border-slate-600 text-white font-mono">←</span>
+                <span class="bg-slate-700 px-1.5 py-0.5 rounded border border-slate-600 text-white font-mono">→</span>
+                <span>Gunakan panah keyboard untuk navigasi cepat</span>
+            </div>
+            
+            <!-- Tombol Pengendali -->
+            <div class="flex space-x-3 w-full md:w-auto justify-between md:justify-end">
+                <button id="btn-prev" onclick="moveSlide(-1)" class="bg-slate-700 hover:bg-slate-600 text-white text-sm font-medium px-5 py-2.5 rounded-xl transition disabled:opacity-30 disabled:cursor-not-allowed flex items-center">
+                    <i class="fa-solid fa-chevron-left mr-2"></i>Kembali
+                </button>
+                <button id="btn-next" onclick="moveSlide(1)" class="bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-bold px-5 py-2.5 rounded-xl transition flex items-center shadow-lg shadow-indigo-600/20">
+                    <span>Lanjut</span><i class="fa-solid fa-chevron-right ml-2" id="next-icon"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT LOGIC -->
+    <script>
+        let activeSlideIndex = 1;
+        const maxSlides = 5;
+
+        function renderSlide() {
+            // Sembunyikan semua slide yang ada
+            document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
+            
+            // Aktifkan slide saat ini
+            document.getElementById(`slide-${activeSlideIndex}`).classList.add('active');
+            
+            // Perbarui teks nomor indikator slide
+            document.getElementById('slide-number').innerText = `Slide ${activeSlideIndex} / ${maxSlides}`;
+            
+            // Matikan tombol kembali jika berada di slide pertama
+            document.getElementById('btn-prev').disabled = (activeSlideIndex === 1);
+            
+            // Modifikasi tombol lanjut jika berada di akhir slide
+            const nextBtn = document.getElementById('btn-next');
+            const nextIcon = document.getElementById('next-icon');
+            if (activeSlideIndex === maxSlides) {
+                nextBtn.querySelector('span').innerText = 'Ulangi';
+                nextIcon.className = "fa-solid fa-rotate-left ml-2";
+                nextBtn.className = "bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-bold px-5 py-2.5 rounded-xl transition flex items-center shadow-lg shadow-emerald-600/20";
+            } else {
+                nextBtn.querySelector('span').innerText = 'Lanjut';
+                nextIcon.className = "fa-solid fa-chevron-right ml-2";
+                nextBtn.className = "bg-indigo-600 hover:bg-indigo-500 text-white text-sm font-bold px-5 py-2.5 rounded-xl transition flex items-center shadow-lg shadow-indigo-600/20";
+            }
+        }
+
+        function moveSlide(step) {
+            activeSlideIndex += step;
+            // Jika melebihi batas maksimal, balik kembali ke slide 1 (Looping presentasi)
+            if (activeSlideIndex > maxSlides) activeSlideIndex = 1;
+            if (activeSlideIndex < 1) activeSlideIndex = 1;
+            renderSlide();
+        }
+
+        // Fitur Navigasi Pintas Menggunakan Tombol Panah Keyboard
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowRight') {
+                moveSlide(1);
+            } else if (e.key === 'ArrowLeft') {
+                if (activeSlideIndex > 1) moveSlide(-1);
+            }
+        });
+
+        // Jalankan fungsi inisialisasi awal
+        renderSlide();
+    </script>
+</body>
+</html>
